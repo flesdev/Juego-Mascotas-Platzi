@@ -44,9 +44,10 @@ body {
     text-align: center;
 }
 .select-pet--container{
-    margin: 20px 0px;
+    margin: 20px 0;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 .select-pet--card{
     width: 180px;
@@ -142,4 +143,34 @@ body {
     font-family: 'Itim', cursive;
     font-size: 1.6rem;
     cursor: pointer;
+}
+
+@media (max-width: 400px) {
+    .select-pet--subtitle{
+        font-size: 1.8rem;
+    }
+    .select-pet--card{
+        width: 150px;
+        height: 120px;
+        font-size: 1.2rem;
+        margin: 10px;
+        border-radius: 20px;
+    }
+    .select-pet--card__img-box{
+        width: 60px;
+        height: 60px;
+    }
+    .select-attack--paragraph{
+        margin: 20px;
+        font-size: 1.4rem;
+    }
+    .select-attack--buttons-box{
+        width: 200px;
+        height: 160px;
+        flex-direction: column;
+    }
+    .select-attack--buttons-box button{
+        width: 100px;
+        height: 40px;
+    }
 }
