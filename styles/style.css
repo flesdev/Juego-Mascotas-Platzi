@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+:root{
+    --color-orange: #FF7B54;
+    --color-light-orange: #FFB26B;
+    --color-yellow: #FFD56F;
+    --color-green: #939B62;
+}
+
+/* Styles order 
+    1.- Dimenciones
+    2.- Modelo de caja
+    3.- Background
+    4.- Posicionamiento (Display) */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Itim', cursive;
+    color: white;
+}
+body {
+    background-color: var(--color-orange);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title{
+    margin: 20px;
+    font-size: 3.2rem;
+}
+.select-pet{
+    margin: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+.select-pet--subtitle{
+    font-size: 2rem;
+    text-align: center;
+}
+.select-pet--container{
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.select-pet--card{
+    width: 150px;
+    height: 150px;
+    background-color: var(--color-green);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1.6rem;
+    margin: 10px;
+    border-radius: 30px;
+}
+.select-pet--card__img-box{
+    width: 70px;
+    height: 70px;
+}
+.select-pet--card__img-box img{
+    width: 100%;
+    height: 100%;
+}
+.select-pet--card__input-box{
+    display: flex;
+    align-items: center;
+}
+.select-pet--card__input-box input{
+    margin: 10px;
+    cursor: pointer;
+}
+.select-pet--button-box{
+    width: 120px;
+    height: 30px;
+    margin: auto;
+    border-radius: 20px;
+}
+.select-pet--button-box button{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+.select-attack{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.select-attack--subtitle{
+    margin: 5px;
+    font-size: 2rem;
+    text-align: center;
+}
+.select-attack--paragraph{
+    margin: 5px;
+    font-size: 1.6rem;
+}
+.select-attack--buttons-box{
+    width: 300px;
+    height: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+}
+.select-attack--buttons-box button{
+    width: 80px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+}
+.messages p {
+    margin: 10px;
+    font-size: 1.6rem;
+}
+.reload{
+    width: 80px;
+    height: 30px;
+}
+.reload button{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    border: none;
+}

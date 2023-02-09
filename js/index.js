@@ -1,6 +1,6 @@
 
-let mascotaJugador
-let mascotaEnemigo
+let mascotaJugador = ""
+let mascotaEnemigo = ""
 
 let ataqueJugador
 let ataqueEnemigo
@@ -28,9 +28,12 @@ function iniciar(){
   let btnMascota = document.getElementById("btn-mascotas")
   btnMascota.addEventListener('click', () => {
     seleccionarMsctJugador()
-    selecMascotaEnemigo()
-    sSeleccionarA.style.display = "block" // Unhide section
-    seleccionarAtaqueJugador()
+    if(mascotaJugador != ""){
+      selecMascotaEnemigo()
+      sSeleccionarA.style.display = "block" // Unhide section
+      seleccionarAtaqueJugador()
+      btnMascota.disabled = true
+    }
 })
 }
 
@@ -87,12 +90,12 @@ function resultadoJuego(){
 let pInicio = document.getElementById("mensaje1")
 
 function crearElemento(text){
-  const pId = document.getElementById("mensajes")
+  let pId = document.getElementById("mensaje1")
   let parrafo = document.createElement("p")
   let texto = document.createTextNode(text) // innerHtml is the same
   parrafo.appendChild(texto)
   pId.appendChild(parrafo)
-  document.body.insertBefore(parrafo, pInicio);
+  pId.insertBefore(parrafo, pInicio);
   pInicio = parrafo
 }
 
@@ -108,11 +111,12 @@ function cambiarVidas(num, suma){
 }
 
 function crearMensajeFinal(text){
-  const pId = document.getElementById("mensajes")
+  const pId = document.getElementById("mensaje1")
   let parrafo = document.createElement("p")
   let texto = document.createTextNode(text) // innerHtml is the same
   parrafo.appendChild(texto)
   pId.appendChild(parrafo)
+  pId.insertBefore(parrafo, pInicio);
   
   sectionReiniciar.style.display = "block"
   
@@ -149,7 +153,7 @@ function seleccionarMsctJugador(){
       spamMascotaJugador.innerHTML = "Ratigueya"
       mascotaJugador = "Ratigueya"
     } else {
-      spamMascotaJugador.innerHTML = "Null"
+      spamMascotaJugador.innerHTML = ""
     }
 }
 
