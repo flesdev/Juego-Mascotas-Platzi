@@ -10,6 +10,7 @@ let nVidasEnemigo = 3
 
 let resultado
 
+let sSeleccionarMascota
 let sSeleccionarA
 let sectionMensaje
 let sectionReiniciar
@@ -21,6 +22,7 @@ function iniciar(){
   sSeleccionarA = document.getElementById("seleccionar-ataque")
   sectionMensaje = document.getElementById("mensajes")
   sectionReiniciar = document.getElementById("reiniciar")
+  sSeleccionarMascota = document.getElementById("seleccionar-mascota")
   sSeleccionarA.style.display = "none"
   sectionMensaje.style.display = "none"
   sectionReiniciar.style.display = "none"
@@ -30,9 +32,9 @@ function iniciar(){
     seleccionarMsctJugador()
     if(mascotaJugador != ""){
       selecMascotaEnemigo()
+      sSeleccionarMascota.style.display = "none"
       sSeleccionarA.style.display = "block" // Unhide section
       seleccionarAtaqueJugador()
-      btnMascota.disabled = true
     }
 })
 }
